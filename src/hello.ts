@@ -1,7 +1,8 @@
 import { Client } from "pg";
+import { config } from "dotenv";
+config();
 
-
-const client = new Client({connectionString:"postgresql://learnDB_owner:Kqdl3r9fSZoD@ep-gentle-lake-a1h3md9f-pooler.ap-southeast-1.aws.neon.tech/learnDB?sslmode=require"});
+const client = new Client({connectionString:`postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@ep-gentle-lake-a1h3md9f-pooler.ap-southeast-1.aws.neon.tech/learnDB?sslmode=require`});
 
 
 async function createUser() {

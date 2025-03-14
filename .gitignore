@@ -1,3 +1,4 @@
 dist
 commands.txt
 node_modules
+.env
